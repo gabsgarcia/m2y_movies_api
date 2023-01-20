@@ -4,7 +4,7 @@ class Api::V1::BaseController < ActionController::API
   private
 
   def not_found(exception)
-    # to show id the isn't entry
+    # to show id that isn't entry
     render json: { error: exception.message }, status: :not_found
   end
 end

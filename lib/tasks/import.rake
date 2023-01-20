@@ -1,11 +1,12 @@
 require 'csv'
 
+# task created to read and import the entries from the csv file
 namespace :import do
   desc "Impport Netflix Movies"
   task netflix_titles: :environment do
     sum = 0
 
-      # to read the cvs file in a endpoint
+      # to read the cvs file and create the entries in the db
       CSV.foreach('./lib/netflix_titles.csv', headers: true, col_sep: ',') do |row|
         m = NetflixTitle.create({
                                   show_id: row[0],
@@ -18,6 +19,7 @@ namespace :import do
                                 })
         sum += 1 if m.persisted?
       end
+
     puts "created #{sum} Netflix titles"
   end
 end

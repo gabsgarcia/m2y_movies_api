@@ -71,4 +71,5 @@ group :test do
   gem "webdrivers"
 end
 
+# use to filter the entries
 gem 'pg_search'
