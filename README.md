@@ -1,24 +1,16 @@
-# README
+<h2 align="left">NETFLIX MOVIES API </h2>
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+BackEnd challenge to create an API RESTful that should complete as follows and how I resolved it:
 
-Things you may want to cover:
+- Read a CSV file and populate the database: 
+  - Created a task to import the entries from the CSV file and create them in the DB
+- List all the movies in a JSON format and filter by genre, year, country,etc.
+  - Used the pg_search gem to be able to use query on the url to filter the entries by the model params
+    ex: http://localhost:3000/api/v1/netflix_titles?query=TV%20Show
 
-* Ruby version
+* Framework: Ruby on Rails
+* Ruby version: 3.1.2p
+* Gem: PG_search used to filter the entries
+* DB: Postgresql
 
-* System dependencies
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
